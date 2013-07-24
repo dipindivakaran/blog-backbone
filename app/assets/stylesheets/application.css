@@ -27,6 +27,13 @@
 }
 
 .error {
-    margin-bottom: 15px;
+    margin-top:5px;
+    margin-bottom:10px;
     color: red;
+    min-height: 15px;
+}
+
+.button-right{
+float: right;
+
 }

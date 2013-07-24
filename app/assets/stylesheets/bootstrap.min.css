@@ -3261,11 +3261,12 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	box-shadow: 0 -1px 10px rgba(0,0,0,0.1)
 }
 .navbar .nav {
-	position: relative;
-	left: 0;
 	display: block;
-	float: left;
-	margin: 0 10px 0 0
+    float: right;
+    font-weight: bold;
+    left: 0;
+    margin: 0 10px 0 0;
+    position: relative;
 }
 .navbar .nav.pull-right {
 	float: right;

@@ -6,7 +6,6 @@ before_filter :require_user
   # GET /posts.json
   def index
     @posts = Post.all
-    puts "__________________ FETCHED ALL POSTS ________________________"
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
@@ -60,7 +59,6 @@ before_filter :require_user
   # PUT /posts/1.json
   def update
     @post = Post.find(params[:id])
-
     respond_to do |format|
       if @post.update_attributes(title: params[:post][:title], content: params[:post][:content])
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
@@ -77,7 +75,6 @@ before_filter :require_user
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-
     respond_to do |format|
       format.html { redirect_to posts_url }
       format.json { head :no_content }
