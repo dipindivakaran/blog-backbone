@@ -1,0 +1,52 @@
+<%= link_to "Register" , new_user_path %>
+
+
+	
+	<%= form_for(@user_session,:url => authenticate_url,:class=>"form-horizontal") do |f| %>
+	 
+    <fieldset>
+    <div id="legend">
+    <legend class="">Login</legend>
+  
+  
+  <% if @user_session.errors.any? %>
+						<div class="error">
+							<%= @user_session.errors.full_messages.first %>
+						</div>
+						<% end %>
+						<div class="control-group">
+							<label class="control-label" for="username">Username</label>
+							<div class="controls">
+								<%= f.text_field :email , :placeholder => "Email",:class=>"input-xlarge",:id=>"username"%>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="password">Password</label>
+							<div class="controls">
+								<%= f.password_field :password , :placeholder => "Password",:class=>"input-xlarge",:id=>"password"%>
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								<%= f.submit "Login",:class=>"btn btn-success"%>
+							</div>
+						</div>
+					</fieldset>
+  
+  
+   
+  <% end %>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

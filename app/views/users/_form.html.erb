@@ -1,0 +1,43 @@
+<%= form_for(@user) do |f| %>
+
+   <% if @user.errors.any? %>
+		<div class="error">
+			<%= @user.errors.full_messages.first %>
+		</div>
+		<% end %>
+
+<div class="register-form">
+   <div class="field">
+    <%= f.label :title %>
+    <%= f.select :title,['Mr','Ms','Mrs'] %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+   <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+   <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+   <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+   <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="submit">
+    <%= f.submit "Register"%>
+  </div>
+  </div>
+<% end %>
