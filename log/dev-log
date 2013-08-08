@@ -1,0 +1,42 @@
+Creating log file 
+Creating log file 
+Creating log file 
+Creating log file 
+############  openid authentication ##############
+############  creating authentication failure ##############
+Creating log file 
+############  openid authentication ##############
+############  creating authentication failure ##############
+Creating log file 
+Creating log file 
+Creating log file 
+Creating log file 
+Creating log file 
+############  openid authentication ##############
+############  creating authentication failure ##############
+Creating log file 
+Creating log file 
+Creating log file 
+############  openid authentication ##############
+############  openid authentication ##############
+--- !ruby/object:OpenID::Consumer::FailureResponse
+endpoint: !ruby/object:OpenID::OpenIDServiceEndpoint
+  claimed_id: 
+  server_url: https://www.google.com/accounts/o8/ud
+  type_uris:
+  - http://specs.openid.net/auth/2.0/server
+  - http://openid.net/srv/ax/1.0
+  - http://specs.openid.net/extensions/ui/1.0/mode/popup
+  - http://specs.openid.net/extensions/ui/1.0/icon
+  - http://specs.openid.net/extensions/pape/1.0
+  local_id: 
+  canonical_id: 
+  used_yadis: true
+  display_identifier: 
+message: Server https://www.google.com/accounts/o8/ud responds that the 'check_authentication'
+  call is not valid
+contact: 
+reference: 
+
+############  creating authentication failure ##############
+Creating log file 

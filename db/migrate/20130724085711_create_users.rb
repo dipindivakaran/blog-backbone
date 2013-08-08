@@ -7,8 +7,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :last_name
       t.boolean :is_active, :default => false
       t.string :phone
-      t.string    :crypted_password,    :null => false
-      t.string    :password_salt,       :null => false
+      t.string    :crypted_password,    :null => true
+      t.string    :password_salt,       :null => true
       t.string    :persistence_token,   :null => false
       t.integer   :failed_login_count,  :null => false, :default => 0
       t.datetime  :last_request_at
@@ -16,6 +16,7 @@ class CreateUsers < ActiveRecord::Migration
       t.datetime  :last_login_at
       t.string    :current_login_ip
       t.string    :last_login_ip
+      t.string    :openid_identifier
       t.timestamps
     end
 

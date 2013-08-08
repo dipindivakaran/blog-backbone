@@ -1,7 +1,7 @@
 <%= link_to "Register" , new_user_path %>
 <div id="login">
 	<%= form_for(@user_session,:url => authenticate_url,:class=>"form-horizontal") do |f| %>
-
+    <%= link_to 'Signin with Google ' , openid_login_url%>
 	<fieldset>
 		<div id="legend">
 			<legend class="">

@@ -1,0 +1,11 @@
+<div id="login"></div>
+
+<script type="text/javascript">
+  $(function() {
+    // Blog is the app name
+    console.log("In post index page");
+    //window.router = new Blog.Routers.PostsRouter({posts: <%= @posts.to_json.html_safe -%>});
+    window.router = new Blog.Routers.UserSessionsRouter({user_session <%= @user_session.to_json.html_safe -%>});
+    Backbone.history.start();
+  });
+</script>

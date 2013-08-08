@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(:version => 20130724085822) do
     t.string   "last_name"
     t.boolean  "is_active",          :default => false
     t.string   "phone"
-    t.string   "crypted_password",                      :null => false
-    t.string   "password_salt",                         :null => false
+    t.string   "crypted_password"
+    t.string   "password_salt"
     t.string   "persistence_token",                     :null => false
     t.integer  "failed_login_count", :default => 0,     :null => false
     t.datetime "last_request_at"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20130724085822) do
     t.datetime "last_login_at"
     t.string   "current_login_ip"
     t.string   "last_login_ip"
+    t.string   "openid_identifier"
     t.datetime "created_at",                            :null => false
     t.datetime "updated_at",                            :null => false
   end

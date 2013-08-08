@@ -4,7 +4,6 @@ Blog::Application.routes.draw do
 
   resources :users
 
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -12,15 +11,14 @@ Blog::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
-     match 'user_sessions/destroy' => 'user_sessions#destroy', :as => :logout
-     match '/login' => 'user_sessions#new', :as => :login
-     match '/authenticate' => 'user_sessions#create', :as => :authenticate
-
-     match '/new_question' => 'home#create', :as => :new_question
-     match '/home' => 'home#index', :as => :home
-     match 'save_answer' => 'home#save_answer', :as => :save_answer
-
-
+  match 'user_sessions/destroy' => 'user_sessions#destroy', :as => :logout
+  match '/login' => 'user_sessions#new', :as => :login
+  match '/authenticate' => 'user_sessions#create', :as => :authenticate
+  match '/openid_login' => 'user_sessions#openid_login', :as => :openid_login
+  match '/openid_authenticate' => 'user_sessions#openid_authenticate', :as => :openid_authenticate
+  match '/new_question' => 'home#create', :as => :new_question
+  match '/posts' => 'posts#index', :as => :home
+  match 'save_answer' => 'home#save_answer', :as => :save_answer
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
@@ -66,9 +64,9 @@ Blog::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
   root :to => 'posts#index'
-  # See how all your routes lay out with "rake routes"
+# See how all your routes lay out with "rake routes"
 
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+# This is a legacy wild controller route that's not recommended for RESTful applications.
+# Note: This route will make all actions in every controller accessible via GET requests.
+# match ':controller(/:action(/:id))(.:format)'
 end
